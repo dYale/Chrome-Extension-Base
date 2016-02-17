@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>EXTENSION</title>
+  </head>
+
+  <body id="main" ng-app="Mapper" ng-csp ng-controller="MapperController">
+  <div class="content row no-gutter">
+    <div id="info-container" class="col-lg-3 col-md-12 no-gutter">
+      <button ng-click="toggleInteractiveMode()">{{initiated || 'dog'}}</button>
+    </div>
+  </div>
+  </body>
+  <script src="../javascript/vendor/angular/angular.min.js"></script>
+  <script src="../javascript/vendor/angular-post-message/dist/angular-post-message.min.js"></script>
+  <script src="../javascript/extension/src/app.js"></script>
+  <script src="../javascript/extension/src/factories/ChromeHelpers.js"></script>
+  <script src="../javascript/extension/src/controllers/target-mapper/details.js"></script>
+
+</html>

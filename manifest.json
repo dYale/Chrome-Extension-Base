@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "Mapper",
+  "description": "Extension",
+  "version": "0.0.1",
+  "background": {
+    "scripts": ["javascript/extension/src/controllers/target-mapper/details.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["javascript/vendor/jquery-2.1.4.min.js","javascript/vendor/jquery.topzindex.js","javascript/vendor/doT/doT.min.js", "javascript/browser/target-mapper.js", "javascript/browser/content.js"],
+      "css": ["stylesheets/target-mapper.css"]
+    }
+  ],
+  "permissions": [
+    "storage",
+    "tabs",
+    "cookies"
+  ],
+  "browser_action": {
+    "default_popup": "views/popup.html"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "web_accessible_resources": [
+    "views/detail.html"
+    ]
+}
